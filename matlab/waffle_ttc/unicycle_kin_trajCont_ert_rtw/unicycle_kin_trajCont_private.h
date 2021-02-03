@@ -7,9 +7,9 @@
  *
  * Code generation for model "unicycle_kin_trajCont".
  *
- * Model version              : 1.48
+ * Model version              : 1.73
  * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
- * C++ source code generated on : Fri Jan  8 13:58:36 2021
+ * C++ source code generated on : Tue Feb  2 21:01:49 2021
  *
  * Target selection: ert.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -28,7 +28,12 @@ extern real_T rt_atan2d_snf(real_T u0, real_T u1);
 extern void unicycle__EnabledSubsystem_Init(B_EnabledSubsystem_unicycle_k_T
   *localB, P_EnabledSubsystem_unicycle_k_T *localP);
 extern void unicycle_kin_t_EnabledSubsystem(boolean_T rtu_Enable, const
-  SL_Bus_unicycle_kin_trajCont_geometry_msgs_Point *rtu_In1,
+  SL_Bus_unicycle_kin_trajCont_std_msgs_Float64 *rtu_In1,
   B_EnabledSubsystem_unicycle_k_T *localB);
+extern void unicycl_EnabledSubsystem_d_Init(B_EnabledSubsystem_unicycle_m_T
+  *localB, P_EnabledSubsystem_unicycle_l_T *localP);
+extern void unicycle_kin_EnabledSubsystem_o(boolean_T rtu_Enable, const
+  SL_Bus_unicycle_kin_trajCont_geometry_msgs_Point *rtu_In1,
+  B_EnabledSubsystem_unicycle_m_T *localB);
 
 #endif                         /* RTW_HEADER_unicycle_kin_trajCont_private_h_ */

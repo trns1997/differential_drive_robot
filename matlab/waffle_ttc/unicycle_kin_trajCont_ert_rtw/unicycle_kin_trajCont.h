@@ -7,9 +7,9 @@
  *
  * Code generation for model "unicycle_kin_trajCont".
  *
- * Model version              : 1.48
+ * Model version              : 1.73
  * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
- * C++ source code generated on : Fri Jan  8 13:58:36 2021
+ * C++ source code generated on : Tue Feb  2 21:01:49 2021
  *
  * Target selection: ert.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -44,67 +44,87 @@
 # define rtmSetErrorStatus(rtm, val)   ((rtm)->errorStatus = (val))
 #endif
 
-/* Block signals for system '<S10>/Enabled Subsystem' */
+/* Block signals for system '<S8>/Enabled Subsystem' */
 typedef struct {
-  SL_Bus_unicycle_kin_trajCont_geometry_msgs_Point In1;/* '<S12>/In1' */
+  SL_Bus_unicycle_kin_trajCont_std_msgs_Float64 In1;/* '<S11>/In1' */
 } B_EnabledSubsystem_unicycle_k_T;
+
+/* Block signals for system '<S14>/Enabled Subsystem' */
+typedef struct {
+  SL_Bus_unicycle_kin_trajCont_geometry_msgs_Point In1;/* '<S16>/In1' */
+} B_EnabledSubsystem_unicycle_m_T;
 
 /* Block signals (default storage) */
 typedef struct {
-  SL_Bus_unicycle_kin_trajCont_nav_msgs_Odometry In1;/* '<S16>/In1' */
+  SL_Bus_unicycle_kin_trajCont_nav_msgs_Odometry In1;/* '<S20>/In1' */
   SL_Bus_unicycle_kin_trajCont_nav_msgs_Odometry b_varargout_2;
   SL_Bus_unicycle_kin_trajCont_geometry_msgs_Twist BusAssignment;/* '<S1>/Bus Assignment' */
   SL_Bus_unicycle_kin_trajCont_geometry_msgs_Point b_varargout_2_m;
-  B_EnabledSubsystem_unicycle_k_T EnabledSubsystem_e;/* '<S11>/Enabled Subsystem' */
-  B_EnabledSubsystem_unicycle_k_T EnabledSubsystem;/* '<S10>/Enabled Subsystem' */
+  real_T KP;
+  real_T P_dist;
+  B_EnabledSubsystem_unicycle_m_T EnabledSubsystem_e;/* '<S15>/Enabled Subsystem' */
+  B_EnabledSubsystem_unicycle_m_T EnabledSubsystem_o;/* '<S14>/Enabled Subsystem' */
+  B_EnabledSubsystem_unicycle_k_T EnabledSubsystem_i;/* '<S9>/Enabled Subsystem' */
+  B_EnabledSubsystem_unicycle_k_T EnabledSubsystem;/* '<S8>/Enabled Subsystem' */
 } B_unicycle_kin_trajCont_T;
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
   ros_slros_internal_block_Publ_T obj; /* '<S6>/SinkBlock' */
-  ros_slros_internal_block_Subs_T obj_p;/* '<S15>/SourceBlock' */
-  ros_slros_internal_block_Subs_T obj_o;/* '<S11>/SourceBlock' */
-  ros_slros_internal_block_Subs_T obj_k;/* '<S10>/SourceBlock' */
-  boolean_T objisempty;                /* '<S15>/SourceBlock' */
-  boolean_T objisempty_f;              /* '<S11>/SourceBlock' */
-  boolean_T objisempty_e;              /* '<S10>/SourceBlock' */
+  ros_slros_internal_block_Subs_T obj_p;/* '<S19>/SourceBlock' */
+  ros_slros_internal_block_Subs_T obj_o;/* '<S15>/SourceBlock' */
+  ros_slros_internal_block_Subs_T obj_k;/* '<S14>/SourceBlock' */
+  ros_slros_internal_block_Subs_T obj_e;/* '<S9>/SourceBlock' */
+  ros_slros_internal_block_Subs_T obj_d;/* '<S8>/SourceBlock' */
+  boolean_T objisempty;                /* '<S19>/SourceBlock' */
+  boolean_T objisempty_f;              /* '<S15>/SourceBlock' */
+  boolean_T objisempty_e;              /* '<S14>/SourceBlock' */
+  boolean_T objisempty_m;              /* '<S9>/SourceBlock' */
+  boolean_T objisempty_i;              /* '<S8>/SourceBlock' */
   boolean_T objisempty_k;              /* '<S6>/SinkBlock' */
 } DW_unicycle_kin_trajCont_T;
 
-/* Parameters for system: '<S10>/Enabled Subsystem' */
+/* Parameters for system: '<S8>/Enabled Subsystem' */
 struct P_EnabledSubsystem_unicycle_k_T_ {
+  SL_Bus_unicycle_kin_trajCont_std_msgs_Float64 Out1_Y0;/* Computed Parameter: Out1_Y0
+                                                         * Referenced by: '<S11>/Out1'
+                                                         */
+};
+
+/* Parameters for system: '<S14>/Enabled Subsystem' */
+struct P_EnabledSubsystem_unicycle_l_T_ {
   SL_Bus_unicycle_kin_trajCont_geometry_msgs_Point Out1_Y0;/* Computed Parameter: Out1_Y0
-                                                            * Referenced by: '<S12>/Out1'
+                                                            * Referenced by: '<S16>/Out1'
                                                             */
 };
 
 /* Parameters (default storage) */
 struct P_unicycle_kin_trajCont_T_ {
-  real_T Pvelocityfeedforwardbasedonfeed;
-                              /* Mask Parameter: Pvelocityfeedforwardbasedonfeed
-                               * Referenced by: '<S2>/Constant'
-                               */
-  real_T Pvelocityfeedforwardbasedonfe_m;
-                              /* Mask Parameter: Pvelocityfeedforwardbasedonfe_m
-                               * Referenced by: '<S2>/Constant1'
-                               */
   SL_Bus_unicycle_kin_trajCont_nav_msgs_Odometry Out1_Y0;/* Computed Parameter: Out1_Y0
-                                                          * Referenced by: '<S16>/Out1'
+                                                          * Referenced by: '<S20>/Out1'
                                                           */
   SL_Bus_unicycle_kin_trajCont_nav_msgs_Odometry Constant_Value;/* Computed Parameter: Constant_Value
-                                                                 * Referenced by: '<S15>/Constant'
+                                                                 * Referenced by: '<S19>/Constant'
                                                                  */
   SL_Bus_unicycle_kin_trajCont_geometry_msgs_Twist Constant_Value_a;/* Computed Parameter: Constant_Value_a
                                                                      * Referenced by: '<S5>/Constant'
                                                                      */
   SL_Bus_unicycle_kin_trajCont_geometry_msgs_Point Constant_Value_p;/* Computed Parameter: Constant_Value_p
-                                                                     * Referenced by: '<S10>/Constant'
+                                                                     * Referenced by: '<S14>/Constant'
                                                                      */
   SL_Bus_unicycle_kin_trajCont_geometry_msgs_Point Constant_Value_h;/* Computed Parameter: Constant_Value_h
-                                                                     * Referenced by: '<S11>/Constant'
+                                                                     * Referenced by: '<S15>/Constant'
                                                                      */
-  P_EnabledSubsystem_unicycle_k_T EnabledSubsystem_e;/* '<S11>/Enabled Subsystem' */
-  P_EnabledSubsystem_unicycle_k_T EnabledSubsystem;/* '<S10>/Enabled Subsystem' */
+  SL_Bus_unicycle_kin_trajCont_std_msgs_Float64 Constant_Value_e;/* Computed Parameter: Constant_Value_e
+                                                                  * Referenced by: '<S8>/Constant'
+                                                                  */
+  SL_Bus_unicycle_kin_trajCont_std_msgs_Float64 Constant_Value_b;/* Computed Parameter: Constant_Value_b
+                                                                  * Referenced by: '<S9>/Constant'
+                                                                  */
+  P_EnabledSubsystem_unicycle_l_T EnabledSubsystem_e;/* '<S15>/Enabled Subsystem' */
+  P_EnabledSubsystem_unicycle_l_T EnabledSubsystem_o;/* '<S14>/Enabled Subsystem' */
+  P_EnabledSubsystem_unicycle_k_T EnabledSubsystem_i;/* '<S9>/Enabled Subsystem' */
+  P_EnabledSubsystem_unicycle_k_T EnabledSubsystem;/* '<S8>/Enabled Subsystem' */
 };
 
 /* Real-time Model Data Structure */
@@ -174,6 +194,13 @@ extern "C" {
 #endif
 
 /*-
+ * These blocks were eliminated from the model due to optimizations:
+ *
+ * Block '<S2>/Constant' : Unused code path elimination
+ * Block '<S2>/Constant1' : Unused code path elimination
+ */
+
+/*-
  * The generated code includes comments that allow you to trace directly
  * back to the appropriate location in the model.  The basic format
  * is <system>/block_name, where system is the system number (uniquely
@@ -195,14 +222,18 @@ extern "C" {
  * '<S5>'   : 'unicycle_kin_trajCont/Command publisher/Blank Message'
  * '<S6>'   : 'unicycle_kin_trajCont/Command publisher/Publish'
  * '<S7>'   : 'unicycle_kin_trajCont/P+velocity feedforward based on feedback linearization/P+velocity feedforward'
- * '<S8>'   : 'unicycle_kin_trajCont/P+velocity feedforward based on feedback linearization/Unicycle kinematic feedback linearization'
- * '<S9>'   : 'unicycle_kin_trajCont/P+velocity feedforward based on feedback linearization/Unicycle kinematic feedback linearization/Unicycle kinematic feedback linearization'
- * '<S10>'  : 'unicycle_kin_trajCont/Planned trajectory subscriber/Subscribe'
- * '<S11>'  : 'unicycle_kin_trajCont/Planned trajectory subscriber/Subscribe1'
- * '<S12>'  : 'unicycle_kin_trajCont/Planned trajectory subscriber/Subscribe/Enabled Subsystem'
- * '<S13>'  : 'unicycle_kin_trajCont/Planned trajectory subscriber/Subscribe1/Enabled Subsystem'
- * '<S14>'  : 'unicycle_kin_trajCont/Pose subscriber/Conversion'
- * '<S15>'  : 'unicycle_kin_trajCont/Pose subscriber/Subscribe'
- * '<S16>'  : 'unicycle_kin_trajCont/Pose subscriber/Subscribe/Enabled Subsystem'
+ * '<S8>'   : 'unicycle_kin_trajCont/P+velocity feedforward based on feedback linearization/Subscribe'
+ * '<S9>'   : 'unicycle_kin_trajCont/P+velocity feedforward based on feedback linearization/Subscribe1'
+ * '<S10>'  : 'unicycle_kin_trajCont/P+velocity feedforward based on feedback linearization/Unicycle kinematic feedback linearization'
+ * '<S11>'  : 'unicycle_kin_trajCont/P+velocity feedforward based on feedback linearization/Subscribe/Enabled Subsystem'
+ * '<S12>'  : 'unicycle_kin_trajCont/P+velocity feedforward based on feedback linearization/Subscribe1/Enabled Subsystem'
+ * '<S13>'  : 'unicycle_kin_trajCont/P+velocity feedforward based on feedback linearization/Unicycle kinematic feedback linearization/Unicycle kinematic feedback linearization'
+ * '<S14>'  : 'unicycle_kin_trajCont/Planned trajectory subscriber/Subscribe'
+ * '<S15>'  : 'unicycle_kin_trajCont/Planned trajectory subscriber/Subscribe1'
+ * '<S16>'  : 'unicycle_kin_trajCont/Planned trajectory subscriber/Subscribe/Enabled Subsystem'
+ * '<S17>'  : 'unicycle_kin_trajCont/Planned trajectory subscriber/Subscribe1/Enabled Subsystem'
+ * '<S18>'  : 'unicycle_kin_trajCont/Pose subscriber/Conversion'
+ * '<S19>'  : 'unicycle_kin_trajCont/Pose subscriber/Subscribe'
+ * '<S20>'  : 'unicycle_kin_trajCont/Pose subscriber/Subscribe/Enabled Subsystem'
  */
 #endif                                 /* RTW_HEADER_unicycle_kin_trajCont_h_ */

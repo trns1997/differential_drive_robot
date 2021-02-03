@@ -7,9 +7,9 @@
  *
  * Code generation for model "unicycle_kin_trajCont".
  *
- * Model version              : 1.48
+ * Model version              : 1.73
  * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
- * C++ source code generated on : Fri Jan  8 13:58:36 2021
+ * C++ source code generated on : Tue Feb  2 21:01:49 2021
  *
  * Target selection: ert.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -42,6 +42,15 @@ typedef struct {
   SL_Bus_unicycle_kin_trajCont_geometry_msgs_Vector3 Linear;
   SL_Bus_unicycle_kin_trajCont_geometry_msgs_Vector3 Angular;
 } SL_Bus_unicycle_kin_trajCont_geometry_msgs_Twist;
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_unicycle_kin_trajCont_std_msgs_Float64_
+#define DEFINED_TYPEDEF_FOR_SL_Bus_unicycle_kin_trajCont_std_msgs_Float64_
+
+typedef struct {
+  real_T Data;
+} SL_Bus_unicycle_kin_trajCont_std_msgs_Float64;
 
 #endif
 
@@ -181,8 +190,11 @@ typedef struct tag_9SewJ4y3IXNs5GrZti8qkG ros_slros_internal_block_Subs_T;
 
 #endif                               /*typedef_ros_slros_internal_block_Subs_T*/
 
-/* Parameters for system: '<S10>/Enabled Subsystem' */
+/* Parameters for system: '<S8>/Enabled Subsystem' */
 typedef struct P_EnabledSubsystem_unicycle_k_T_ P_EnabledSubsystem_unicycle_k_T;
+
+/* Parameters for system: '<S14>/Enabled Subsystem' */
+typedef struct P_EnabledSubsystem_unicycle_l_T_ P_EnabledSubsystem_unicycle_l_T;
 
 /* Parameters (default storage) */
 typedef struct P_unicycle_kin_trajCont_T_ P_unicycle_kin_trajCont_T;

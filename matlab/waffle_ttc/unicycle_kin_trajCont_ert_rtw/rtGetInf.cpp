@@ -7,9 +7,9 @@
  *
  * Code generation for model "unicycle_kin_trajCont".
  *
- * Model version              : 1.48
+ * Model version              : 1.73
  * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
- * C++ source code generated on : Fri Jan  8 13:58:36 2021
+ * C++ source code generated on : Tue Feb  2 21:01:49 2021
  *
  * Target selection: ert.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping

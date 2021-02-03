@@ -4,7 +4,7 @@
 
   <!-- Run rviz -->
   <node type="rviz" name="rviz" pkg="rviz" args="-d $(find differential_drive_robot)/config/waffle-kin-config.rviz" />
-  
+   
   <!-- Run the trajectory tracking controller -->
   <node pkg="unicycle_kin_trajcont_test_1" type="unicycle_kin_trajcont_test_1_node" name="unicycle_kin_trajcont_test_1" />
 
@@ -13,4 +13,6 @@
 
   <!-- Run the simulator -->
   <node pkg="waffle_kin_sim" type="waffle_kin_sim_node" name="waffle_kin_sim" />
+
+  <node pkg="epsilon_publisher" type="epsilon_publisher.py" name="epsilon_publisher" output="screen" />
 </launch>

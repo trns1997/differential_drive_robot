@@ -184,6 +184,23 @@ void convertToBus(SL_Bus_unicycle_kin_trajCont_ros_time_Time* busPtr, ros::Time 
 }
 
 
+// Conversions between SL_Bus_unicycle_kin_trajCont_std_msgs_Float64 and std_msgs::Float64
+
+void convertFromBus(std_msgs::Float64* msgPtr, SL_Bus_unicycle_kin_trajCont_std_msgs_Float64 const* busPtr)
+{
+  const std::string rosMessageType("std_msgs/Float64");
+
+  msgPtr->data =  busPtr->Data;
+}
+
+void convertToBus(SL_Bus_unicycle_kin_trajCont_std_msgs_Float64* busPtr, std_msgs::Float64 const* msgPtr)
+{
+  const std::string rosMessageType("std_msgs/Float64");
+
+  busPtr->Data =  msgPtr->data;
+}
+
+
 // Conversions between SL_Bus_unicycle_kin_trajCont_std_msgs_Header and std_msgs::Header
 
 void convertFromBus(std_msgs::Header* msgPtr, SL_Bus_unicycle_kin_trajCont_std_msgs_Header const* busPtr)

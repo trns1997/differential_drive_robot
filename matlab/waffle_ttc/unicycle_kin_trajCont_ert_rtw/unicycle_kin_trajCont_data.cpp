@@ -7,9 +7,9 @@
  *
  * Code generation for model "unicycle_kin_trajCont".
  *
- * Model version              : 1.48
+ * Model version              : 1.73
  * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
- * C++ source code generated on : Fri Jan  8 13:58:36 2021
+ * C++ source code generated on : Tue Feb  2 21:01:49 2021
  *
  * Target selection: ert.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -23,18 +23,8 @@
 
 /* Block parameters (default storage) */
 P_unicycle_kin_trajCont_T unicycle_kin_trajCont_P = {
-  /* Mask Parameter: Pvelocityfeedforwardbasedonfeed
-   * Referenced by: '<S2>/Constant'
-   */
-  1.5,
-
-  /* Mask Parameter: Pvelocityfeedforwardbasedonfe_m
-   * Referenced by: '<S2>/Constant1'
-   */
-  1.0,
-
   /* Computed Parameter: Out1_Y0
-   * Referenced by: '<S16>/Out1'
+   * Referenced by: '<S20>/Out1'
    */
   {
     {
@@ -124,7 +114,7 @@ P_unicycle_kin_trajCont_T unicycle_kin_trajCont_P = {
   },
 
   /* Computed Parameter: Constant_Value
-   * Referenced by: '<S15>/Constant'
+   * Referenced by: '<S19>/Constant'
    */
   {
     {
@@ -231,7 +221,7 @@ P_unicycle_kin_trajCont_T unicycle_kin_trajCont_P = {
   },
 
   /* Computed Parameter: Constant_Value_p
-   * Referenced by: '<S10>/Constant'
+   * Referenced by: '<S14>/Constant'
    */
   {
     0.0,                               /* X */
@@ -240,7 +230,7 @@ P_unicycle_kin_trajCont_T unicycle_kin_trajCont_P = {
   },
 
   /* Computed Parameter: Constant_Value_h
-   * Referenced by: '<S11>/Constant'
+   * Referenced by: '<S15>/Constant'
    */
   {
     0.0,                               /* X */
@@ -248,10 +238,24 @@ P_unicycle_kin_trajCont_T unicycle_kin_trajCont_P = {
     0.0                                /* Z */
   },
 
-  /* Start of '<S11>/Enabled Subsystem' */
+  /* Computed Parameter: Constant_Value_e
+   * Referenced by: '<S8>/Constant'
+   */
+  {
+    0.0                                /* Data */
+  },
+
+  /* Computed Parameter: Constant_Value_b
+   * Referenced by: '<S9>/Constant'
+   */
+  {
+    0.0                                /* Data */
+  },
+
+  /* Start of '<S15>/Enabled Subsystem' */
   {
     /* Computed Parameter: Out1_Y0
-     * Referenced by: '<S13>/Out1'
+     * Referenced by: '<S17>/Out1'
      */
     {
       0.0,                             /* X */
@@ -261,12 +265,12 @@ P_unicycle_kin_trajCont_T unicycle_kin_trajCont_P = {
   }
   ,
 
-  /* End of '<S11>/Enabled Subsystem' */
+  /* End of '<S15>/Enabled Subsystem' */
 
-  /* Start of '<S10>/Enabled Subsystem' */
+  /* Start of '<S14>/Enabled Subsystem' */
   {
     /* Computed Parameter: Out1_Y0
-     * Referenced by: '<S12>/Out1'
+     * Referenced by: '<S16>/Out1'
      */
     {
       0.0,                             /* X */
@@ -274,5 +278,31 @@ P_unicycle_kin_trajCont_T unicycle_kin_trajCont_P = {
       0.0                              /* Z */
     }
   }
-  /* End of '<S10>/Enabled Subsystem' */
+  ,
+
+  /* End of '<S14>/Enabled Subsystem' */
+
+  /* Start of '<S9>/Enabled Subsystem' */
+  {
+    /* Computed Parameter: Out1_Y0
+     * Referenced by: '<S12>/Out1'
+     */
+    {
+      0.0                              /* Data */
+    }
+  }
+  ,
+
+  /* End of '<S9>/Enabled Subsystem' */
+
+  /* Start of '<S8>/Enabled Subsystem' */
+  {
+    /* Computed Parameter: Out1_Y0
+     * Referenced by: '<S11>/Out1'
+     */
+    {
+      0.0                              /* Data */
+    }
+  }
+  /* End of '<S8>/Enabled Subsystem' */
 };
