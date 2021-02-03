@@ -9,7 +9,7 @@
  *
  * Model version              : 1.121
  * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
- * C++ source code generated on : Fri Jan  8 13:52:20 2021
+ * C++ source code generated on : Wed Feb  3 22:56:50 2021
  *
  * Target selection: ert.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -23,7 +23,7 @@
  * Code generation for Simulink model "waffle_kin_sim".
  *
  * Simulink Coder version                : 9.3 (R2020a) 18-Nov-2019
- * C++ source code generated on : Fri Jan  8 13:52:20 2021
+ * C++ source code generated on : Wed Feb  3 22:56:50 2021
  *
  * Note that the generated code is not dependent on this header file.
  * The file is used in cojuction with the automatic build procedure.
