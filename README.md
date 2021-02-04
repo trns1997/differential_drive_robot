@@ -65,6 +65,13 @@ A Rviz window should open up and display the robot odom pose.
 
 <img src= https://github.com/trns1997/differential_drive_robot/blob/main/media/kin_sim.gif/>
 
+#### Check Ros Graph
+```
+rosrun rqt_graph rqt_graph
+```
+<img src= https://github.com/trns1997/differential_drive_robot/blob/main/media/kin_sim_graph.png/>
+
+
 ## Running SLAM and Building a MAP
 To make things simple a launch file has been created to faciliated the mapping process
 ```
@@ -80,6 +87,11 @@ Once satisfied with the built map, run the map server service in a new terminal 
 ```
 rosrun map_server map_saver -f ~/map
 ```
+#### Check Ros Graph
+```
+rosrun rqt_graph rqt_graph
+```
+<img src= https://github.com/trns1997/differential_drive_robot/blob/main/media/slam_graph.png/>
 
 ## Running RRT* on our built map
 - Open matlab and run the `waffler_RRT_star.m` script
@@ -109,6 +121,13 @@ Enter Epsilon followed by Kp: 0.1
 Enter Epsilon followed by Kp: 1.5
 Enter Epsilon followed by Kp:
 ```
+
+#### Check Ros Graph
+```
+rosrun rqt_graph rqt_graph
+```
+<img src= https://github.com/trns1997/differential_drive_robot/blob/main/media/ttc_graph.png/>
+
 
 ## Team Members
 * **Thomas Narayana Swamy** - 10709057
