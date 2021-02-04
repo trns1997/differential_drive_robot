@@ -83,7 +83,7 @@ rosrun map_server map_saver -f ~/map
 
 ## Running RRT* on our built map
 - Open matlab and run the `waffler_RRT_star.m` script
-- The script ask for user input for start and end pose. Example:
+- The script asks for user input for start and end pose. Example:
 ```
 Input Start Pose: [-4.3, 1.5, -pi]
 Input End Pose: [5.8, -4.2, 0]
@@ -93,6 +93,22 @@ The algorithm determines the shortest path from the start to end point based on 
 
 <img src= https://github.com/trns1997/differential_drive_robot/blob/main/media/rrt_star.png/>
 
+
+## Running Trajectory Tracking Controller
+```
+roslaunch differential_drive_robot waffle_ttc_test.launch
+```
+### Result
+Similar to the kinematic simulator section, an instance of rviz will be launched displaying the robots odom frame.
+But additionally the termnial permits the user to input a `Kp` and `epsilon` value to see how the trajectory controller 
+performs with the change in parameters.
+
+An example terminal prompt:
+```
+Enter Epsilon followed by Kp: 0.1
+Enter Epsilon followed by Kp: 1.5
+Enter Epsilon followed by Kp:
+```
 
 ## Team Members
 * **Thomas Narayana Swamy** - 10709057
